@@ -1,6 +1,7 @@
 using System.Threading.Tasks;
 using System;
 using System.Xml.Linq;
+using FortuneTeller;
 
 namespace FortuneTest
 {
@@ -11,7 +12,7 @@ namespace FortuneTest
     [TestFixture]
     public class UserValidationTest
     {
-        //private User testUser;
+        private User testUser;
 
 
         /// <summary>
@@ -20,7 +21,7 @@ namespace FortuneTest
         [SetUp]
         public void Setup()
         {
-            //testUser = new User();
+            testUser = new User();
         }
 
         /// <summary>
@@ -29,7 +30,7 @@ namespace FortuneTest
         [Test]
         public void First_Name_Test_for_Empty()
         {
-            //Assert.Throws<ValidateException>(() => testUser.FirstName = string.Empty);
+            Assert.Throws<ValidateException>(() => testUser.FirstName=string.Empty);
         }
 
         /// <summary>
@@ -38,8 +39,8 @@ namespace FortuneTest
         [Test]
         public void First_Name_Can_Not_Be_Greater_Then_50()
         {
-            //string pad = "Name";
-            //Assert.Throws<ValidateException>(() => testUser.FirstName = pad.PadLeft(200));
+            string pad = "Name";
+            Assert.Throws<ValidateException>(() => testUser.FirstName = pad.PadLeft(200));
         }
 
         /// <summary>
@@ -48,7 +49,7 @@ namespace FortuneTest
         [Test]
         public void Last_Name_Test_for_Empty()
         {
-            //Assert.Throws<ValidateException>(() => testUser.LastName = string.Empty);
+            Assert.Throws<ValidateException>(() => testUser.LastName = string.Empty);
         }
 
         /// <summary>
@@ -57,8 +58,8 @@ namespace FortuneTest
         [Test]
         public void Last_Name_Can_Not_Be_Greater_Then_50()
         {
-            //string pad = "Name";
-            //Assert.Throws<ValidateException>(() => testUser.LastName = pad.PadLeft(200));
+            string pad = "Name";
+            Assert.Throws<ValidateException>(() => testUser.LastName = pad.PadLeft(200));
         }
 
         /// <summary>
@@ -67,7 +68,7 @@ namespace FortuneTest
         [Test]
         public void Age_Can_Not_Be_Greater_130()
         {
-            //Assert.Throws<ValidateException>(() => testUser.Age = 131);
+            Assert.Throws<ValidateException>(() => testUser.Age = 131);
         }
 
         /// <summary>
@@ -76,7 +77,7 @@ namespace FortuneTest
         [Test]
         public void Age_Can_Not_Be_Less_0()
         {
-            //Assert.Throws<ValidateException>(() => testUser.Age = -1);
+            Assert.Throws<ValidateException>(() => testUser.Age = -1);
         }
         /// <summary>
         /// Birth month less then 1
@@ -84,7 +85,7 @@ namespace FortuneTest
         [Test]
         public void Birth_Can_Not_Be_Less_1()
         {
-            //Assert.Throws<ValidateException>(() => testUser.BirthMonth = 0);
+            Assert.Throws<ValidateException>(() => testUser.BirthMonth = 0);
         }
 
         /// <summary>
@@ -93,7 +94,7 @@ namespace FortuneTest
         [Test]
         public void Birth_Can_Not_Be_Greater_12()
         {
-            //Assert.Throws<ValidateException>(() => testUser.BirthMonth = 13);
+            Assert.Throws<ValidateException>(() => testUser.BirthMonth = 13);
         }
         /// <summary>
         /// Test Siblings less then 0
@@ -101,7 +102,7 @@ namespace FortuneTest
         [Test]
         public void Siblings_Can_Not_Be_Less_0()
         {
-            //Assert.Throws<ValidateException>(() => testUser.Siblings = -1);
+            Assert.Throws<ValidateException>(() => testUser.Sibling = -1);
         }
         /// <summary>
         /// Test Siblings greater then 13
@@ -109,7 +110,7 @@ namespace FortuneTest
         [Test]
         public void Siblings_Can_Not_Be_Greater_13()
         {
-            //Assert.Throws<ValidateException>(() => testUser.Siblings = 19);
+            Assert.Throws<ValidateException>(() => testUser.Sibling = 19);
         }
 
     }
