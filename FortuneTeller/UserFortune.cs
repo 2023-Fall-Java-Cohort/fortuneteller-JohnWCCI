@@ -75,7 +75,7 @@ namespace FortuneTeller
                 case 11:
                 case 12:
                     {
-                        return " $86.23";
+                        return "$86.23";
                     }
                 default:
                     {

@@ -20,9 +20,9 @@ namespace FortuneTeller
 
         public int Age { get => age; set => age =UserValidation.ValidateAge(value); }
 
-        public int BirthMonth { get => birthMonth; set => UserValidation.ValidateMonth(value); }
+        public int BirthMonth { get => birthMonth; set => birthMonth = UserValidation.ValidateMonth(value); }
 
-        public int Sibling { get => sibling; set => UserValidation.ValidateSibling(value); }
+        public int Sibling { get => sibling; set => sibling =UserValidation.ValidateSibling(value); }
 
         public RoygbivEnum FavoriteColor { get => color; set => color = value;  }
 
